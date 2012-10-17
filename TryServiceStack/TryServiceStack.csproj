@@ -77,4 +77,7 @@
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
+  <ItemGroup>
+    <Content Include="web.config" />
+  </ItemGroup>
 </Project>
