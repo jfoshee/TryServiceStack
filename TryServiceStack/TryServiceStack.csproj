@@ -34,12 +34,45 @@
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Web.Services" />
+    <Reference Include="ServiceStack.Common">
+      <HintPath>..\packages\ServiceStack-v3\ServiceStack.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.FluentValidation.Mvc3">
+      <HintPath>..\packages\ServiceStack-v3\ServiceStack.FluentValidation.Mvc3.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces">
+      <HintPath>..\packages\ServiceStack-v3\ServiceStack.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.OrmLite.SqlServer">
+      <HintPath>..\packages\ServiceStack-v3\ServiceStack.OrmLite.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.OrmLite">
+      <HintPath>..\packages\ServiceStack-v3\ServiceStack.OrmLite.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Plugins.ProtoBuf">
+      <HintPath>..\packages\ServiceStack-v3\ServiceStack.Plugins.ProtoBuf.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Razor">
+      <HintPath>..\packages\ServiceStack-v3\ServiceStack.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Redis">
+      <HintPath>..\packages\ServiceStack-v3\ServiceStack.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.ServiceInterface">
+      <HintPath>..\packages\ServiceStack-v3\ServiceStack.ServiceInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text">
+      <HintPath>..\packages\ServiceStack-v3\ServiceStack.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack">
+      <HintPath>..\packages\ServiceStack-v3\ServiceStack.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <ProjectExtensions>
     <MonoDevelop>
-      <Properties VerifyCodeBehindFields="True" VerifyCodeBehindEvents="True" xmlns="">
+      <Properties VerifyCodeBehindFields="True" VerifyCodeBehindEvents="True">
         <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
       </Properties>
     </MonoDevelop>
