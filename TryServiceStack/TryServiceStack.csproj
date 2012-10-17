@@ -79,5 +79,12 @@
   </ProjectExtensions>
   <ItemGroup>
     <Content Include="web.config" />
+    <Content Include="Global.asax" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HelloService.cs" />
   </ItemGroup>
 </Project>
