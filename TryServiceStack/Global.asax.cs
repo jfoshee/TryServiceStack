@@ -1,11 +1,11 @@
 using System;
-//using System.ComponentModel;
+using System.Web;
 using Funq;
 using ServiceStack.WebHost.Endpoints;
 
 namespace TryServiceStack
 {
-    public class Global : System.Web.HttpApplication
+    public class Global : HttpApplication
     {
         public class HelloAppHost : AppHostBase
         {
@@ -17,7 +17,8 @@ namespace TryServiceStack
                 //register user-defined REST-ful urls
                 Routes
                     .Add<Hello>("/hello")
-                        .Add<Hello>("/hello/{Name}");
+                    .Add<Hello>("/hello/{Name}")
+                    .Add<AddRequest>("/add");
             }
         }
         

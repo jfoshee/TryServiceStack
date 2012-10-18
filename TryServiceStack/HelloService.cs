@@ -15,12 +15,33 @@ namespace TryServiceStack
     }
 
     // 3. Create your Web Service implementation
-    public class HelloService : IService<Hello>
+    public class HelloService : IService<Hello>, IService<AddRequest>
     {
         public object Execute(Hello request)
         {
             return new HelloResponse { Result = "Hello, " + request.Name };
         }
-    }
-}
 
+        public object Execute(AddRequest request)
+        {
+            return new AdderResponse(request);
+        }
+    }
+
+    public class AddRequest
+    {
+        public int Addend1 { get; set; }
+        public int Addend2 { get; set; }
+    }
+    
+    public class AdderResponse
+    {
+        public int Sum { get; private set; }
+
+        public AdderResponse(AddRequest addRequest)
+        {
+            Sum = addRequest.Addend1 + addRequest.Addend2;
+        }
+    }
+
+}
