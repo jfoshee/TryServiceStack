@@ -8,6 +8,7 @@ public partial class MainWindow: Gtk.Window
     public MainWindow(): base (Gtk.WindowType.Toplevel)
     {
         Build();
+        Default = SubmitButton; // TODO: Get default button working
         SubmitButton.Clicked += HandleClicked;
     }
 
@@ -15,8 +16,16 @@ public partial class MainWindow: Gtk.Window
     {
         var name = NameField.Text;
         var client = new JsonServiceClient("http://127.0.0.1:8080/servicestack");
-        var response = client.Send<HelloResponse>(new Hello { Name = name });
-        NameLabel.LabelProp = response.Result;
+        client.SendAsync<HelloResponse>(
+            new Hello { Name = name }, 
+            (response) => Append(response.Result),
+            (response, error) => Append("ERROR: " + error.Message)
+        );
+    }
+
+    void Append(string text)
+    {
+        OutputTextView.Buffer.InsertAtCursor(text + Environment.NewLine);
     }
 	
     protected void OnDeleteEvent(object sender, DeleteEventArgs a)

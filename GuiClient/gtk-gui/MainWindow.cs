@@ -7,11 +7,14 @@ public partial class MainWindow
 	private global::Gtk.Label NameLabel;
 	private global::Gtk.Entry NameField;
 	private global::Gtk.Button SubmitButton;
+	private global::Gtk.ScrolledWindow GtkScrolledWindow;
+	private global::Gtk.TextView OutputTextView;
 	
 	protected virtual void Build ()
 	{
 		global::Stetic.Gui.Initialize (this);
 		// Widget MainWindow
+		this.CanDefault = true;
 		this.Name = "MainWindow";
 		this.Title = global::Mono.Unix.Catalog.GetString ("MainWindow");
 		this.WindowPosition = ((global::Gtk.WindowPosition)(4));
@@ -30,6 +33,7 @@ public partial class MainWindow
 		w1.Fill = false;
 		// Container child vbox1.Gtk.Box+BoxChild
 		this.NameField = new global::Gtk.Entry ();
+		this.NameField.CanDefault = true;
 		this.NameField.CanFocus = true;
 		this.NameField.Name = "NameField";
 		this.NameField.Text = global::Mono.Unix.Catalog.GetString ("World");
@@ -42,6 +46,7 @@ public partial class MainWindow
 		w2.Fill = false;
 		// Container child vbox1.Gtk.Box+BoxChild
 		this.SubmitButton = new global::Gtk.Button ();
+		this.SubmitButton.CanDefault = true;
 		this.SubmitButton.CanFocus = true;
 		this.SubmitButton.Name = "SubmitButton";
 		this.SubmitButton.UseUnderline = true;
@@ -51,6 +56,20 @@ public partial class MainWindow
 		w3.Position = 2;
 		w3.Expand = false;
 		w3.Fill = false;
+		// Container child vbox1.Gtk.Box+BoxChild
+		this.GtkScrolledWindow = new global::Gtk.ScrolledWindow ();
+		this.GtkScrolledWindow.Name = "GtkScrolledWindow";
+		this.GtkScrolledWindow.ShadowType = ((global::Gtk.ShadowType)(1));
+		// Container child GtkScrolledWindow.Gtk.Container+ContainerChild
+		this.OutputTextView = new global::Gtk.TextView ();
+		this.OutputTextView.CanFocus = true;
+		this.OutputTextView.Name = "OutputTextView";
+		this.OutputTextView.Editable = false;
+		this.GtkScrolledWindow.Add (this.OutputTextView);
+		this.vbox1.Add (this.GtkScrolledWindow);
+		global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.GtkScrolledWindow]));
+		w5.PackType = ((global::Gtk.PackType)(1));
+		w5.Position = 3;
 		this.Add (this.vbox1);
 		if ((this.Child != null)) {
 			this.Child.ShowAll ();

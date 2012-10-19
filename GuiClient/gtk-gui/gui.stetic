@@ -10,6 +10,7 @@
   </import>
   <widget class="Gtk.Window" id="MainWindow" design-size="400 300">
     <property name="MemberName" />
+    <property name="CanDefault">True</property>
     <property name="Title" translatable="yes">MainWindow</property>
     <property name="WindowPosition">CenterOnParent</property>
     <signal name="DeleteEvent" handler="OnDeleteEvent" />
@@ -32,6 +33,7 @@
         <child>
           <widget class="Gtk.Entry" id="NameField">
             <property name="MemberName" />
+            <property name="CanDefault">True</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">World</property>
             <property name="IsEditable">True</property>
@@ -47,6 +49,7 @@
         <child>
           <widget class="Gtk.Button" id="SubmitButton">
             <property name="MemberName" />
+            <property name="CanDefault">True</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
             <property name="Label" translatable="yes">Submit</property>
@@ -57,6 +60,26 @@
             <property name="AutoSize">True</property>
             <property name="Expand">False</property>
             <property name="Fill">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.ScrolledWindow" id="GtkScrolledWindow">
+            <property name="MemberName" />
+            <property name="ShadowType">In</property>
+            <child>
+              <widget class="Gtk.TextView" id="OutputTextView">
+                <property name="MemberName" />
+                <property name="CanFocus">True</property>
+                <property name="ShowScrollbars">True</property>
+                <property name="Editable">False</property>
+                <property name="Text" translatable="yes" />
+              </widget>
+            </child>
+          </widget>
+          <packing>
+            <property name="PackType">End</property>
+            <property name="Position">3</property>
+            <property name="AutoSize">True</property>
           </packing>
         </child>
       </widget>
