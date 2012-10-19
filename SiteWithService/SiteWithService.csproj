@@ -44,12 +44,6 @@
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="ServiceStack">
-      <HintPath>..\packages\ServiceStack-v3\ServiceStack.dll</HintPath>
-    </Reference>
-    <Reference Include="ServiceStack.Interfaces">
-      <HintPath>..\packages\ServiceStack-v3\ServiceStack.Interfaces.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\" />
@@ -60,9 +54,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="..\TryServiceStack\HelloService.cs">
-      <Link>HelloService.cs</Link>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -80,4 +71,10 @@
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
+  <ItemGroup>
+    <ProjectReference Include="..\HelloServices\HelloServices.csproj">
+      <Project>{BB5775FD-7240-4BB0-8DFC-3F0B8C0EE1E6}</Project>
+      <Name>HelloServices</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

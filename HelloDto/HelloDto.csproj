@@ -5,10 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{2A92842C-72F4-4F8D-8174-EA8116FFE63C}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>ConsoleServiceClient</RootNamespace>
-    <AssemblyName>ConsoleServiceClient</AssemblyName>
+    <ProjectGuid>{B0EB57CB-CF02-41A2-8B00-7ABA15E113F4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>HelloDto</RootNamespace>
+    <AssemblyName>HelloDto</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -18,7 +18,7 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Externalconsole>True</Externalconsole>
+    <ConsolePause>False</ConsolePause>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -26,26 +26,14 @@
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Externalconsole>True</Externalconsole>
+    <ConsolePause>False</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="ServiceStack">
-      <HintPath>..\packages\ServiceStack-v3\ServiceStack.dll</HintPath>
-    </Reference>
-    <Reference Include="ServiceStack.Common">
-      <HintPath>..\packages\ServiceStack-v3\ServiceStack.Common.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Main.cs" />
     <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Hello.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\HelloDto\HelloDto.csproj">
-      <Project>{B0EB57CB-CF02-41A2-8B00-7ABA15E113F4}</Project>
-      <Name>HelloDto</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>
