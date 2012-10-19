@@ -8,5 +8,17 @@
 	<div>
 		<%= Html.Encode(ViewData["Message"]) %>
 	</div>
+	<form action="servicestack/xml/syncreply/Hello" method="post">
+	    <label>Name:</label>
+	    <input type="text" name="Name" value="World!" />
+	    <input type="submit" />
+	</form>	
+	<hr />
+	<form action="servicestack/json/syncreply/AddRequest" method="post">
+	    <label>Name:</label>
+	    <input type="text" name="Addend1" value="1" />
+	    <input type="text" name="Addend2" value="2" />
+	    <input type="submit" />
+	</form>		
 </body>
 
