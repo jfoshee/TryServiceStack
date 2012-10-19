@@ -4,9 +4,9 @@
 public partial class MainWindow
 {
 	private global::Gtk.VBox vbox1;
-	private global::Gtk.Label label2;
-	private global::Gtk.Entry entry1;
-	private global::Gtk.Button button1;
+	private global::Gtk.Label NameLabel;
+	private global::Gtk.Entry NameField;
+	private global::Gtk.Button SubmitButton;
 	
 	protected virtual void Build ()
 	{
@@ -20,34 +20,34 @@ public partial class MainWindow
 		this.vbox1.Name = "vbox1";
 		this.vbox1.Spacing = 6;
 		// Container child vbox1.Gtk.Box+BoxChild
-		this.label2 = new global::Gtk.Label ();
-		this.label2.Name = "label2";
-		this.label2.LabelProp = global::Mono.Unix.Catalog.GetString ("Enter your name");
-		this.vbox1.Add (this.label2);
-		global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.label2]));
+		this.NameLabel = new global::Gtk.Label ();
+		this.NameLabel.Name = "NameLabel";
+		this.NameLabel.LabelProp = global::Mono.Unix.Catalog.GetString ("Enter your name");
+		this.vbox1.Add (this.NameLabel);
+		global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.NameLabel]));
 		w1.Position = 0;
 		w1.Expand = false;
 		w1.Fill = false;
 		// Container child vbox1.Gtk.Box+BoxChild
-		this.entry1 = new global::Gtk.Entry ();
-		this.entry1.CanFocus = true;
-		this.entry1.Name = "entry1";
-		this.entry1.Text = global::Mono.Unix.Catalog.GetString ("World");
-		this.entry1.IsEditable = true;
-		this.entry1.InvisibleChar = '●';
-		this.vbox1.Add (this.entry1);
-		global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.entry1]));
+		this.NameField = new global::Gtk.Entry ();
+		this.NameField.CanFocus = true;
+		this.NameField.Name = "NameField";
+		this.NameField.Text = global::Mono.Unix.Catalog.GetString ("World");
+		this.NameField.IsEditable = true;
+		this.NameField.InvisibleChar = '●';
+		this.vbox1.Add (this.NameField);
+		global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.NameField]));
 		w2.Position = 1;
 		w2.Expand = false;
 		w2.Fill = false;
 		// Container child vbox1.Gtk.Box+BoxChild
-		this.button1 = new global::Gtk.Button ();
-		this.button1.CanFocus = true;
-		this.button1.Name = "button1";
-		this.button1.UseUnderline = true;
-		this.button1.Label = global::Mono.Unix.Catalog.GetString ("Submit");
-		this.vbox1.Add (this.button1);
-		global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.button1]));
+		this.SubmitButton = new global::Gtk.Button ();
+		this.SubmitButton.CanFocus = true;
+		this.SubmitButton.Name = "SubmitButton";
+		this.SubmitButton.UseUnderline = true;
+		this.SubmitButton.Label = global::Mono.Unix.Catalog.GetString ("Submit");
+		this.vbox1.Add (this.SubmitButton);
+		global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.SubmitButton]));
 		w3.Position = 2;
 		w3.Expand = false;
 		w3.Fill = false;

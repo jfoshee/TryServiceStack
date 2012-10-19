@@ -37,6 +37,12 @@
     <Reference Include="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="pango-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="atk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="ServiceStack.Common">
+      <HintPath>..\packages\ServiceStack-v3\ServiceStack.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack">
+      <HintPath>..\packages\ServiceStack-v3\ServiceStack.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="gtk-gui\gui.stetic">
@@ -51,4 +57,10 @@
     <Compile Include="AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\HelloDto\HelloDto.csproj">
+      <Project>{B0EB57CB-CF02-41A2-8B00-7ABA15E113F4}</Project>
+      <Name>HelloDto</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

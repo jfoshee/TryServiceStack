@@ -18,7 +18,7 @@
         <property name="MemberName" />
         <property name="Spacing">6</property>
         <child>
-          <widget class="Gtk.Label" id="label2">
+          <widget class="Gtk.Label" id="NameLabel">
             <property name="MemberName" />
             <property name="LabelProp" translatable="yes">Enter your name</property>
           </widget>
@@ -30,7 +30,7 @@
           </packing>
         </child>
         <child>
-          <widget class="Gtk.Entry" id="entry1">
+          <widget class="Gtk.Entry" id="NameField">
             <property name="MemberName" />
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">World</property>
@@ -45,7 +45,7 @@
           </packing>
         </child>
         <child>
-          <widget class="Gtk.Button" id="button1">
+          <widget class="Gtk.Button" id="SubmitButton">
             <property name="MemberName" />
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
