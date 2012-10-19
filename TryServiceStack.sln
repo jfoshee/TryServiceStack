@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloServices", "HelloServi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloDto", "HelloDto\HelloDto.csproj", "{B0EB57CB-CF02-41A2-8B00-7ABA15E113F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuiClient", "GuiClient\GuiClient.csproj", "{988EB11B-437C-4E24-B36F-086A5237EAFC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{2A92842C-72F4-4F8D-8174-EA8116FFE63C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A92842C-72F4-4F8D-8174-EA8116FFE63C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A92842C-72F4-4F8D-8174-EA8116FFE63C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{988EB11B-437C-4E24-B36F-086A5237EAFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{988EB11B-437C-4E24-B36F-086A5237EAFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{988EB11B-437C-4E24-B36F-086A5237EAFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{988EB11B-437C-4E24-B36F-086A5237EAFC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B0EB57CB-CF02-41A2-8B00-7ABA15E113F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B0EB57CB-CF02-41A2-8B00-7ABA15E113F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0EB57CB-CF02-41A2-8B00-7ABA15E113F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +45,6 @@ Global
 		{ED3690FF-716F-4ADF-A594-6BDDC30E9838}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = SiteWithService\SiteWithService.csproj
+		StartupItem = GuiClient\GuiClient.csproj
 	EndGlobalSection
 EndGlobal
