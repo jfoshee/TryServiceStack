@@ -10,7 +10,6 @@
   </import>
   <widget class="Gtk.Window" id="MainWindow" design-size="400 300">
     <property name="MemberName" />
-    <property name="CanDefault">True</property>
     <property name="Title" translatable="yes">MainWindow</property>
     <property name="WindowPosition">CenterOnParent</property>
     <signal name="DeleteEvent" handler="OnDeleteEvent" />
@@ -33,10 +32,10 @@
         <child>
           <widget class="Gtk.Entry" id="NameField">
             <property name="MemberName" />
-            <property name="CanDefault">True</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">World</property>
             <property name="IsEditable">True</property>
+            <property name="ActivatesDefault">True</property>
             <property name="InvisibleChar">●</property>
           </widget>
           <packing>

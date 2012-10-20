@@ -3,12 +3,12 @@ using Gtk;
 using ServiceStack.ServiceClient.Web;
 using HelloDto;
 
-public partial class MainWindow: Gtk.Window
+public partial class MainWindow: Window
 {	
-    public MainWindow(): base (Gtk.WindowType.Toplevel)
+    public MainWindow(): base (WindowType.Toplevel)
     {
         Build();
-        Default = SubmitButton; // TODO: Get default button working
+        Default = SubmitButton;
         SubmitButton.Clicked += HandleClicked;
     }
 

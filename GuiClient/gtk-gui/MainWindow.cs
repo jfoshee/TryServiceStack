@@ -14,7 +14,6 @@ public partial class MainWindow
 	{
 		global::Stetic.Gui.Initialize (this);
 		// Widget MainWindow
-		this.CanDefault = true;
 		this.Name = "MainWindow";
 		this.Title = global::Mono.Unix.Catalog.GetString ("MainWindow");
 		this.WindowPosition = ((global::Gtk.WindowPosition)(4));
@@ -33,11 +32,11 @@ public partial class MainWindow
 		w1.Fill = false;
 		// Container child vbox1.Gtk.Box+BoxChild
 		this.NameField = new global::Gtk.Entry ();
-		this.NameField.CanDefault = true;
 		this.NameField.CanFocus = true;
 		this.NameField.Name = "NameField";
 		this.NameField.Text = global::Mono.Unix.Catalog.GetString ("World");
 		this.NameField.IsEditable = true;
+		this.NameField.ActivatesDefault = true;
 		this.NameField.InvisibleChar = '●';
 		this.vbox1.Add (this.NameField);
 		global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.NameField]));

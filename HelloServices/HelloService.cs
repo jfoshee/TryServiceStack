@@ -1,3 +1,4 @@
+using System;
 using HelloDto;
 using ServiceStack.ServiceHost;
 
@@ -7,6 +8,7 @@ namespace HelloServices
     {
         public object Execute(Hello request)
         {
+            Console.WriteLine("Received request: " + request.Name);
             return new HelloResponse { Result = "Hello, " + request.Name };
         }
     }
