@@ -12,6 +12,9 @@ namespace iPadClient
 	partial class iPadClientViewController
 	{
 		[Outlet]
+		MonoTouch.UIKit.UITextField ServiceAddressField { get; set; }
+
+		[Outlet]
 		MonoTouch.UIKit.UITextField NameField { get; set; }
 
 		[Outlet]
@@ -22,6 +25,11 @@ namespace iPadClient
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (ServiceAddressField != null) {
+				ServiceAddressField.Dispose ();
+				ServiceAddressField = null;
+			}
+
 			if (NameField != null) {
 				NameField.Dispose ();
 				NameField = null;
