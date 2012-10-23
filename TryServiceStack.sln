@@ -13,10 +13,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloDto", "HelloDto\HelloD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuiClient", "GuiClient\GuiClient.csproj", "{988EB11B-437C-4E24-B36F-086A5237EAFC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iPadClient", "iPadClient\iPadClient.csproj", "{C5469F82-569A-46C2-B0D9-D1D7D3CBD748}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+		Ad-Hoc|iPhone = Ad-Hoc|iPhone
+		AppStore|iPhone = AppStore|iPhone
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{071EB53A-8ED6-4CD0-9657-EAF6AB5B8CC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -39,12 +47,28 @@ Global
 		{BB5775FD-7240-4BB0-8DFC-3F0B8C0EE1E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB5775FD-7240-4BB0-8DFC-3F0B8C0EE1E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB5775FD-7240-4BB0-8DFC-3F0B8C0EE1E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5469F82-569A-46C2-B0D9-D1D7D3CBD748}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{C5469F82-569A-46C2-B0D9-D1D7D3CBD748}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{C5469F82-569A-46C2-B0D9-D1D7D3CBD748}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{C5469F82-569A-46C2-B0D9-D1D7D3CBD748}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{C5469F82-569A-46C2-B0D9-D1D7D3CBD748}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{C5469F82-569A-46C2-B0D9-D1D7D3CBD748}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{C5469F82-569A-46C2-B0D9-D1D7D3CBD748}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{C5469F82-569A-46C2-B0D9-D1D7D3CBD748}.Debug|iPhone.Build.0 = Debug|iPhone
+		{C5469F82-569A-46C2-B0D9-D1D7D3CBD748}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{C5469F82-569A-46C2-B0D9-D1D7D3CBD748}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{C5469F82-569A-46C2-B0D9-D1D7D3CBD748}.Release|Any CPU.ActiveCfg = Release|iPhoneSimulator
+		{C5469F82-569A-46C2-B0D9-D1D7D3CBD748}.Release|Any CPU.Build.0 = Release|iPhoneSimulator
+		{C5469F82-569A-46C2-B0D9-D1D7D3CBD748}.Release|iPhone.ActiveCfg = Release|iPhone
+		{C5469F82-569A-46C2-B0D9-D1D7D3CBD748}.Release|iPhone.Build.0 = Release|iPhone
+		{C5469F82-569A-46C2-B0D9-D1D7D3CBD748}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{C5469F82-569A-46C2-B0D9-D1D7D3CBD748}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{ED3690FF-716F-4ADF-A594-6BDDC30E9838}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ED3690FF-716F-4ADF-A594-6BDDC30E9838}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED3690FF-716F-4ADF-A594-6BDDC30E9838}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED3690FF-716F-4ADF-A594-6BDDC30E9838}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = GuiClient\GuiClient.csproj
+		StartupItem = iPadClient\iPadClient.csproj
 	EndGlobalSection
 EndGlobal
