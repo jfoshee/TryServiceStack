@@ -1,8 +1,7 @@
 using System;
-using System.Drawing;
-
-using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using ServiceStack.ServiceClient.Web;
+using HelloDto;
 
 namespace iPadClient
 {
@@ -11,38 +10,37 @@ namespace iPadClient
         public iPadClientViewController() : base ("iPadClientViewController", null)
         {
         }
-		
-        public override void DidReceiveMemoryWarning()
-        {
-            // Releases the view if it doesn't have a superview.
-            base.DidReceiveMemoryWarning();
-			
-            // Release any cached data, images, etc that aren't in use.
-        }
-		
+
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-			
-            // Perform any additional setup after loading the view, typically from a nib.
+            NameField.Text = "World";
+            OutputText.Text = String.Empty;
+            SubmitButton.TouchUpInside += HandleClicked;
         }
-		
+
+        void HandleClicked(object sender, EventArgs e)
+        {
+            var name = NameField.Text;
+            var client = new JsonServiceClient("http://127.0.0.1:8080/servicestack");
+            client.SendAsync<HelloResponse>(
+                new Hello { Name = name }, 
+                (response) => Append(response.Result),
+                (response, error) => Append("ERROR: " + error.Message)
+            );
+            NameField.ResignFirstResponder();
+        }
+        
+        void Append(string text)
+        {
+            InvokeOnMainThread(() =>
+               OutputText.Text += text + Environment.NewLine);
+        }
+
         public override void ViewDidUnload()
         {
             base.ViewDidUnload();
-			
-            // Clear any references to subviews of the main view in order to
-            // allow the Garbage Collector to collect them sooner.
-            //
-            // e.g. myOutlet.Dispose (); myOutlet = null;
-			
             ReleaseDesignerOutlets();
-        }
-		
-        public override bool ShouldAutorotateToInterfaceOrientation(UIInterfaceOrientation toInterfaceOrientation)
-        {
-            // Return true for supported orientations
-            return true;
         }
     }
 }

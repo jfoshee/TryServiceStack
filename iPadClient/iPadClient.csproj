@@ -24,6 +24,7 @@
     <MtouchDebug>True</MtouchDebug>
     <MtouchProfiling>True</MtouchProfiling>
     <MtouchLink>None</MtouchLink>
+    <MtouchArch>ARMv7</MtouchArch>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -80,6 +81,15 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
+    <Reference Include="ServiceStack.Text.MonoTouch">
+      <HintPath>..\packages\ServiceStack-v3\ServiceStack.Text.MonoTouch.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces.MonoTouch">
+      <HintPath>..\packages\ServiceStack-v3\ServiceStack.Interfaces.MonoTouch.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Common.MonoTouch">
+      <HintPath>..\packages\ServiceStack-v3\ServiceStack.Common.MonoTouch.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -96,4 +106,10 @@
     <InterfaceDefinition Include="iPadClientViewController.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\HelloDto.MonoTouch\HelloDto.MonoTouch.csproj">
+      <Project>{C7D994F5-8423-4E00-B0D4-F61DABDA3E5C}</Project>
+      <Name>HelloDto.MonoTouch</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
